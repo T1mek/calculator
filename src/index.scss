@@ -1,39 +1,84 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #1e1e1e;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  background-color: #1e1e1e;
+  display: grid;
+  place-content: center;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  font-size: 2rem;
+}
+.container {
+  height: 100vh;
+  width: 70vh;
+  background-color: rgba(21, 21, 21, 1);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 7px 7px 5px 0px rgba(51, 51, 51, 0.6);
 }
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
-  .header {
-    width: 428px;
-    height: 926px;
-    background-color: #151515;
-    border-radius: 30px;
-    border: 10px solid rgba(51, 51, 51, 0.6);
-    box-shadow: 0px 4px 85px 42px rgba(0, 0, 0, 0.2);
-    position: relative;
-    p{
-      color: white;
-      position: absolute;
-      bottom: 390px;
-      right: 21px;
-      font-weight: 400;
-      font-size: 112px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+}
+.screen {
+  grid-column: 1 / -1;
+  color: white;
+  text-align: right;
+  padding: 0.5em;
+  font-size: 60px;
+  overflow: hidden;
+}
+.btn {
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  background: #333333;
+  border: 3px solid #333333;
+  box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
+}
+.btn:hover {
+  background-color: gray;
+}
+.light-gray {
+  color: white;
+  background: #333333;
+  border: 3px solid #333333;
+  box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
+}
 
-    }
-  }
+.light-gray:hover {
+  background-color: gray;
+}
+.orange {
+  background: radial-gradient(
+    213.48% 213.48% at 0% -32.02%,
+    #faff00 0%,
+    #ff00f5 100%
+  );
+  border: 3px solid #333333;
+}
+
+.orange:hover {
+  color: #ff00f5;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+  border-radius: 25px;
+  place-content: unset;
+  align-items: center;
+  padding-left: 2rem;
 }
